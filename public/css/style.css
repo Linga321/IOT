@@ -1,0 +1,182 @@
+html {
+    font-size: 22px;
+}
+
+
+/* Body stsyle */
+
+.wrapper {
+    display: block;
+    margin: 5em auto;
+    border: 1px solid #555;
+    width: 700px;
+    height: 100%;
+    position: relative;
+}
+
+p {
+    text-align: center;
+}
+
+.label {
+    height: 1em;
+    padding: .3em;
+    background: rgba(255, 255, 255, .8);
+    position: absolute;
+    display: none;
+}
+
+.vcenter-item {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Login form */
+
+.wrapper-login {
+    background: #dbdfe5;
+    width: 450px;
+    min-height: 300px;
+    display: block;
+    margin: 5em auto;
+    position: relative;
+}
+
+.wrapper-register {
+    background: #dbdfe5;
+    width: 450px;
+    min-height: 400px;
+    display: block;
+    margin: 5em auto;
+    position: relative;
+}
+
+.box {
+    padding: 25px;
+    width: 100%;
+}
+
+
+/* Automode slider button */
+
+#advanced-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: #bc9d12;
+    border-radius: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.slider::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    border-radius: 25px;
+}
+
+.slider::after {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    content: 'OFF';
+    left: 50%;
+    top: 4px;
+}
+
+.slider,
+.slider::before {
+    transition: all 0.2s;
+}
+
+.input-checkbox:checked+.slider {
+    border: 2px solid #258805;
+    background-color: #55aa7f;
+}
+
+.input-checkbox:checked+.slider::before {
+    left: 50%;
+}
+
+.input-checkbox:checked+.slider::after {
+    content: "ON";
+    left: 0;
+}
+
+
+/* Dropdown for chart time set*/
+
+.dropdown-menu.radio .dropdown-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.dropdown-menu.radio input {
+    visibility: hidden;
+    position: absolute;
+    left: -30px;
+}
+
+.dropdown-menu.radio i {
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+}
+
+.dropdown-item.active {
+    background-color: #555;
+    color: #fff;
+}
+
+
+/* Disable html click evet when it on auto mode*/
+
+.textDisplay {
+    visibility: hidden;
+    width: 600px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 15%;
+}
+
+.auto_mode:hover .textDisplay {
+    visibility: visible;
+}
+
+
+/* Chart*/
+
+#interactive {
+    height: 400px;
+}
+
+
+/* */
+
+.btn .active {
+    background-color: #5cb85ca6;
+}

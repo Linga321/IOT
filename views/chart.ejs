@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sweetalert2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>EMD | Chart</title>
+</head>
+
+<body>
+    <%- include('header.html') %>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="card-title">
+                        <b style="color: #f2c949">Pressure </b>&<b style="color: #00c0ef">Speed </b>
+                    </h3>
+                    <p> The chart generates (pressure/ speed) and number of samples </p>
+                </div>
+                <div class="col-lg-12">
+                    <div class="clearfix">
+                        <div class="btn-group float-left">
+                            <select id="select_sample" class="selectpicker form-control " onChange="changeSample(this.value);">
+                                <option>Select sample count | Time</option>
+                                <option value="10"> 10 Sample| 50 Sec </option>
+                                <option value="20">20 Sample | 100 Sec</option>
+                                <option value="40">40 Sample | 200 Sec</option>
+                                <option value="100">100 Sample | 500 Sec</option>
+                                <option value="200">200 Sample | 1000 Sec</option>
+                        </select>
+                        </div>
+
+                        <div class="btn-group float-right" id="realtime" data-toggle="btn-toggle">
+                            Real time&nbsp;
+                            <button type="button" class="btn btn-default btn-sm active" data-toggle="on">On</button>
+                            <button type="button" class="btn btn-default btn-sm mw-60" data-toggle="off">Off</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" row">
+                <div class="col-lg-12 p-1" id="interactive"></div>
+            </div>
+        </div>
+        </div>
+        <!-- /.card-body-->
+        <!-- Main jquery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Bootstrap 4 -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- FLOT CHARTS -->
+        <script src="js/jquery.flot.js"></script>
+        <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+        <script src="js/jquery.flot.resize.js"></script>
+        <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+        <script src="js/jquery.flot.pie.js"></script>
+        <!-- SweetAlert2 -->
+        <script src="js/sweetalert2.min.js"></script>
+        <!-- Toastr -->
+        <script src="js/toastr.min.js"></script>
+
+        <!-- jquery-validation -->
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/additional-methods.min.js"></script>
+        <script async src="js/chart.js"></script>
+</body>
+
+</html>
