@@ -1,2 +1,2 @@
 # IOT
-This apppliaction develvelp to suport as a front-end for the EMD project thats uses C++
+This application is designed to provide front-end support for EMD projects that use C ++ and works a back-end of the air ventilation system 
